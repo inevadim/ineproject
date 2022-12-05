@@ -1,0 +1,12 @@
+.menu{
+    background-color:red;
+    ul {display: flex;
+        li{
+            list-style: none;
+            cursor: pointer;
+        }
+        .active{
+            color:greenyellow;
+        }
+    }
+}

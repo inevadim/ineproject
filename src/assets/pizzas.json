@@ -1,0 +1,23 @@
+[
+  {
+    "type": "classic",
+    "title": "Card 1",
+    "alt_title": "Описание 1",
+    "price": 127,
+    "srcPicca": "img/pizza/mooshrome.png"
+  },
+  {
+    "type": "classic",
+    "title": "Card 2",
+    "alt_title": "Описание 2",
+    "price": 128,
+    "srcPicca": "img/pizza/mooshrome.png"
+  },
+  {
+    "type": "vegetable",
+    "title": "Card 3",
+    "alt_title": "Описание 3",
+    "price": 129,
+    "srcPicca": "img/pizza/village.png"
+  }
+]

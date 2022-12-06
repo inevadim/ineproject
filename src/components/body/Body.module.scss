@@ -1,4 +1,6 @@
 .body{
     background-color: gray;
     display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 }

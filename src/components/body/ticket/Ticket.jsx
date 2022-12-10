@@ -29,10 +29,10 @@ export const Ticket = ({ title, alt_title, price, srcPicca }) => {
           <Typography variant="body2" color="text.secondary">
             {price}
           </Typography>
-          <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
-          <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} />
         </CardContent>
       </CardActionArea>
+      <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+      <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} />
     </Card>
   );
 };

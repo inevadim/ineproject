@@ -27,7 +27,7 @@ export const Ticket = ({ title, alt_title, price, srcPicca }) => {
             {alt_title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {price}
+            PRICE - {price}$
           </Typography>
         </CardContent>
       </CardActionArea>

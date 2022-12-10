@@ -8,7 +8,7 @@ export const Menu = () => {
     setActive(variable);
   };
 
-  const categories = ['Классические', 'Вегетарианские', 'Острые', 'Акции'];
+  const categories = ['Classic', 'Vegetable', 'Hot', 'Sale'];
 
   return (
     <div className={styles.menu}>

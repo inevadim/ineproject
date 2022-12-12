@@ -18,13 +18,16 @@
         margin: 0 auto;
         padding-left: 0px;
         padding: 10px;
-
+        .active{
+            color: rgb(203, 103, 10);
+        }
         li{
             width: 100%;
             margin: 0 auto;
             &:hover{
                 color: rgb(203, 103, 10);
             }
+            
         }
     }
 }

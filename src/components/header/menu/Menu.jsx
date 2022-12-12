@@ -24,7 +24,7 @@ export const Menu = () => {
           );
         })}
       </ul>
-      <div className={styles.shoppingCart}>ShoppingCart</div>
+      <div className={styles.sorting}>Сортировка</div>
     </div>
   );
 };

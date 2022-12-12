@@ -1,5 +1,5 @@
 import styles from './Ticket.module.scss';
-// import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -12,12 +12,18 @@ import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+
+import { BigTicket } from './bigTicket/BigTicket';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export const Ticket = ({ title, alt_title, price, srcPicca }) => {
+  const [isVisibleBigTicket, setIsVisibleBigTicket] = useState(false);
+  const onClickBigTicket = () => {
+    setIsVisibleBigTicket(!isVisibleBigTicket);
+  };
   return (
     <Card className={styles.ticket} sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => onClickBigTicket()}>
         <CardMedia component="img" image={srcPicca} alt={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -33,6 +39,7 @@ export const Ticket = ({ title, alt_title, price, srcPicca }) => {
       </CardActionArea>
       <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
       <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} />
+      {isVisibleBigTicket && <BigTicket />}
     </Card>
   );
 };

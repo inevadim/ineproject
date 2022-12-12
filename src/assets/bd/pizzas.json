@@ -1,10 +1,10 @@
 [
   {
     "type": "classic",
-    "title": "Card 1",
-    "alt_title": "Описание 1",
-    "price": 127,
-    "srcPicca": "img/shaurm/classic.jpg"
+    "title": "Грибная",
+    "alt_title": "Пицца грибная",
+    "price": 17,
+    "srcPicca": "img/pizza/mooshrome.png"
   },
   {
     "type": "classic",

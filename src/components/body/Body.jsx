@@ -1,6 +1,6 @@
 import styles from './Body.module.scss';
 import { Ticket } from './ticket/Ticket';
-import pizzasJson from '../../assets/pizzas.json';
+import pizzasJson from '../../assets/bd/pizzas.json';
 export const Body = () => {
   return (
     <div className={styles.body}>

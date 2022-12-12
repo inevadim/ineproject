@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Menu.module.scss';
+import { PopupSort } from './popupSort/PopupSort';
 
 export const Menu = () => {
   const [active, setActive] = useState(0);
@@ -7,6 +8,10 @@ export const Menu = () => {
 
   const onCLickCategories = variable => {
     setActive(variable);
+  };
+
+  const onClickVisible = () => {
+    setIsVisible(!isVisible);
   };
 
   const categories = ['Пицца', 'Шаурма', 'Бургер', 'Суши'];
@@ -25,7 +30,10 @@ export const Menu = () => {
           );
         })}
       </ul>
-      <div className={styles.sorting}>Сортировка по: популярности</div>
+      <div className={styles.sorting}>
+        Сортировка по: <span onClick={() => onClickVisible()}>популярности</span>
+        {isVisible && <PopupSort />}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,26 @@
+.popupSort{
+    background-color: rgb(210, 212, 210);
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 80px;
+    z-index: 999;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(177, 230, 178);
+    color:rgb(95, 102, 102);
+
+    ul{
+        display: flex;
+        flex-direction: column;    
+        align-items: center;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding: 10px;
+        // background-color: yellow;
+        li{
+            // background-color: greenyellow;
+            margin: 0 auto;
+        }
+    }
+}

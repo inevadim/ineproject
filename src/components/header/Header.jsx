@@ -1,5 +1,4 @@
 import { Menu } from './menu/Menu.jsx';
-import { ShoppingCart } from './shoppingCart/ShoppingCart.jsx';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -25,7 +24,6 @@ export const Header = () => {
         </AppBar>
       </Box>
       <Menu />
-      <ShoppingCart />
     </div>
   );
 };

@@ -24,6 +24,7 @@ export const Menu = () => {
           );
         })}
       </ul>
+      <div className={styles.shoppingCart}>ShoppingCart</div>
     </div>
   );
 };

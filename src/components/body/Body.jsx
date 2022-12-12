@@ -11,11 +11,13 @@ export const Body = () => {
     alert('312');
   };
   return (
-    <div className={styles.body}>
-      {pizzasJson.map((obj, i) => {
-        return <Ticket onClick={() => onClickBigTicket()} {...obj} key={i} />;
-      })}
-      {isVisibleBigTicket && <BigTicket />}
+    <div className={styles.wrapperBody}>
+      <div className={styles.body}>
+        {pizzasJson.map((obj, i) => {
+          return <Ticket onClick={() => onClickBigTicket()} {...obj} key={i} />;
+        })}
+        {isVisibleBigTicket && <BigTicket />}
+      </div>
     </div>
   );
 };

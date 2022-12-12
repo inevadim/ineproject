@@ -13,9 +13,17 @@
         }
     }
     .sorting{
-        background-color: yellow;
+        // background-color: yellow;
         margin-right: 30px;
         display: flex;     
         align-items: center;
+
+        span{
+            color: rgb(255, 129, 11);
+            font-weight: 800;
+            margin-left: 5px;
+            border-bottom: 1px dotted rgb(255, 129, 11);
+            cursor: pointer;
+        }
     }
 }

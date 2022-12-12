@@ -5,6 +5,7 @@ import { BigTicket } from './ticket/bigTicket/BigTicket';
 import { SkeletonMaket } from './skeleton/Skeleton';
 
 export const Body = () => {
+  const [isLoadingFetch, setIsLoadingFetch] = useState(true);
   //https://63973a0b86d04c76338f0a50.mockapi.io/items
   useEffect(() => {
     fetch('https://63973a0b86d04c76338f0a50.mockapi.io/items')
@@ -13,6 +14,7 @@ export const Body = () => {
       })
       .then(arr => {
         setItems(arr);
+        setIsLoadingFetch(false);
       });
   }, []);
   const [items, setItems] = useState([]);
@@ -21,10 +23,14 @@ export const Body = () => {
   return (
     <div className={styles.wrapperBody}>
       <div className={styles.body}>
-        {items.map((obj, i) => {
-          return <Ticket {...obj} key={i} />;
-          // return <SkeletonMaket {...obj} key={i} />;
-        })}
+        {isLoadingFetch
+          ? [...new Array(6)].map((_, i) => {
+              <SkeletonMaket key={i} />;
+            })
+          : items.map((obj, i) => {
+              return <Ticket {...obj} key={i} />;
+            })}
+
         {isVisibleBigTicket && <BigTicket />}
       </div>
     </div>

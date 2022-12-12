@@ -25,7 +25,7 @@ export const Body = () => {
       <div className={styles.body}>
         {isLoadingFetch
           ? [...new Array(6)].map((_, i) => {
-              <SkeletonMaket key={i} />;
+              return <SkeletonMaket key={i} />;
             })
           : items.map((obj, i) => {
               return <Ticket {...obj} key={i} />;

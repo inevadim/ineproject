@@ -1,24 +1,24 @@
 [
   {
     "type": "classic",
-    "title": "Грибная",
-    "alt_title": "Пицца грибная",
+    "title": "Пицца маргарита",
+    "alt_title": "Пицца Маргарита",
     "price": 17,
-    "srcPicca": "img/pizza/mooshrome.png"
+    "srcPicca": "https://cdn.foodpicasso.com/assets/2020/11/12/8ecd9f9bdd3a01a02bc55e93f5c8e9c2---jpg_550x550_6c74f_convert.webp"
   },
   {
     "type": "classic",
-    "title": "Card 2",
-    "alt_title": "Описание 2",
+    "title": "Пицца четыре сезона",
+    "alt_title": "Пицца Четыре сезона",
     "price": 128,
-    "srcPicca": "img/pizza/mooshrome.png"
+    "srcPicca": "https://cdn.foodpicasso.com/assets/2020/11/12/2464667fbb70c1f7152d1c813c9a44d2---jpg_550x550_6c74f_convert.webp"
   },
   {
     "type": "vegetable",
-    "title": "Card 3",
-    "alt_title": "Описание 3",
+    "title": "Пицца Итальянская",
+    "alt_title": "Пицца Итальянская",
     "price": 129,
-    "srcPicca": "img/pizza/village.png"
+    "srcPicca": "https://cdn.foodpicasso.com/assets/2020/11/12/c9b2abc2a1b2eabc4238858923891a1d---jpg_550x550_6c74f_convert.webp"
   },
   {
     "type": "vegetable",

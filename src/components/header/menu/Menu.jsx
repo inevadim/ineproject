@@ -3,6 +3,7 @@ import styles from './Menu.module.scss';
 
 export const Menu = () => {
   const [active, setActive] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   const onCLickCategories = variable => {
     setActive(variable);
@@ -24,7 +25,7 @@ export const Menu = () => {
           );
         })}
       </ul>
-      <div className={styles.sorting}>Сортировка</div>
+      <div className={styles.sorting}>Сортировка по: популярности</div>
     </div>
   );
 };

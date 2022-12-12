@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 export const Header = () => {
   return (
     <div>
@@ -17,9 +18,16 @@ export const Header = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <b>Кафе №1</b>
+              <Link to="/">
+                <b>Кафе №1</b>
+              </Link>
             </Typography>
-            <Button color="inherit">Корзина</Button>
+            <div>
+              <Link to="/contacts">
+                <span className={styles.contacts}>Контакты</span>
+              </Link>
+              <Button color="inherit">Корзина</Button>
+            </div>
           </Toolbar>
         </AppBar>
       </Box>

@@ -31,8 +31,10 @@ export const Menu = () => {
         })}
       </ul>
       <div className={styles.sorting}>
-        Сортировка по: <span onClick={() => onClickVisible()}>популярности</span>
-        {isVisible && <PopupSort />}
+        Сортировка по:
+        {/* <span onClick={() => onClickVisible()}>популярности</span>
+        {isVisible && <PopupSort />} */}
+        <PopupSort />
       </div>
     </div>
   );

@@ -1,15 +1,11 @@
 .popupSort{
     background-color: rgb(243, 243, 243);
     position: absolute;
-    margin-top: 140px;
-    margin-left: 80px;
+    margin-top: 20px;
     z-index: 999;
     overflow: hidden;
     border-radius: 5px;
-    border: 1px solid;
-    border-color: rgb(177, 230, 178);
-    color:rgb(255, 129, 11);
-    font-weight: 800;
+    font-weight: 500;
 
     ul{
         display: flex;
@@ -17,17 +13,21 @@
         align-items: center;
         margin: 0 auto;
         padding-left: 0px;
-        padding: 10px;
+        padding: 0px;
+
+
         .active{
             color: rgb(203, 103, 10);
+            background-color: rgb(253, 237, 221);
         }
+
         li{
             width: 100%;
             margin: 0 auto;
+            padding: 10px;
             &:hover{
                 color: rgb(203, 103, 10);
-            }
-            
+            }           
         }
     }
 }

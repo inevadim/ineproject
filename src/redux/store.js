@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import filterReducer from './slices/filterSlice';
-import modalShoppingCartReducer from './slices/modalShoppingCartSlice';
+import modalReducer from './slices/modalSlice';
 
 export const store = configureStore({
   reducer: {
     filterSlice: filterReducer,
-    modalShoppingCartSlice: modalShoppingCartReducer,
+    modalSlice: modalReducer,
   },
 });
 console.log(store);

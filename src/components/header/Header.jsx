@@ -1,3 +1,4 @@
+import { useSelector, useDispatch } from 'react-redux';
 import { Menu } from './menu/Menu.jsx';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,7 +9,10 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
+import { switchVisibleModalShoppingCart } from '../../redux/slices/modalShoppingCartSlice';
 export const Header = () => {
+  const switchShoppingCart = useSelector(state => state.modalShoppingCartSlice.value);
+  const dispatch = useDispatch();
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -26,7 +30,9 @@ export const Header = () => {
               <Link to="/contacts">
                 <span className={styles.contacts}>Контакты</span>
               </Link>
-              <Button color="inherit">Корзина</Button>
+              <Button onClick={() => dispatch(switchVisibleModalShoppingCart())} color="inherit">
+                Корзина
+              </Button>
             </div>
           </Toolbar>
         </AppBar>

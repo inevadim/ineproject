@@ -9,7 +9,7 @@ export const ShoppingCart = () => {
     <div
       onClick={() => dispatch(switchVisibleModalShoppingCart())}
       className={styles.wrapperShoppingCart}>
-      <div className={styles.shoppingCart}></div>
+      <div onClick={e => e.stopPropagation()} className={styles.shoppingCart}></div>
     </div>
   );
 };

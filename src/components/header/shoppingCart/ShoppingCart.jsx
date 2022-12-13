@@ -1,5 +1,15 @@
-import styles from './ShoppingCart.modal.scss';
+import styles from './ShoppingCart.module.scss';
+import { useSelector, useDispatch } from 'react-redux';
+import { switchVisibleModalShoppingCart } from '../../../redux/slices/modalShoppingCartSlice';
 
 export const ShoppingCart = () => {
-  return <div className={styles.shoppingCart}>ShoppingCart</div>;
+  const switchShoppingCart = useSelector(state => state.modalShoppingCartSlice.value);
+  const dispatch = useDispatch();
+  return (
+    <div
+      onClick={() => dispatch(switchVisibleModalShoppingCart())}
+      className={styles.wrapperShoppingCart}>
+      <div className={styles.shoppingCart}></div>
+    </div>
+  );
 };

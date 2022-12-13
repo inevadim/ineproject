@@ -14,6 +14,7 @@ export const modalSlice = createSlice({
     },
     switchBigTicketSlice: (state, action) => {
       state.valueBigTicket = !state.valueBigTicket;
+      console.log('switch');
     },
   },
 });

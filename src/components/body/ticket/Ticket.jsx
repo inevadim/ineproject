@@ -14,17 +14,12 @@ import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-
 import { BigTicket } from './bigTicket/BigTicket';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export const Ticket = ({ id, title, alt_title, price, srcPicca }) => {
-  // const [isVisibleBigTicket, setIsVisibleBigTicket] = useState(false);
   const switchBigTicket = useSelector(state => state.modalSlice.valueBigTicket);
   const dispatch = useDispatch();
-  // const onClickBigTicket = () => {
-  //   setIsVisibleBigTicket(!isVisibleBigTicket);
-  // };
   return (
     <Card className={styles.ticket} sx={{ maxWidth: 345 }}>
       <div onClick={() => console.log({ id }, { title })}>

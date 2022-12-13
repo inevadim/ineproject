@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   valueMenu: false,
+  valueBigTicket: false,
 };
 
 export const modalSlice = createSlice({
@@ -10,10 +11,12 @@ export const modalSlice = createSlice({
   reducers: {
     switchShoppingCartSlice: (state, action) => {
       state.valueMenu = !state.valueMenu;
-      console.log(state.valueMenu);
+    },
+    switchBigTicketSlice: (state, action) => {
+      state.valueBigTicket = !state.valueBigTicket;
     },
   },
 });
 
-export const { switchShoppingCartSlice } = modalSlice.actions;
+export const { switchShoppingCartSlice, switchBigTicketSlice } = modalSlice.actions;
 export default modalSlice.reducer;

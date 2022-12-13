@@ -1,5 +1,7 @@
 import styles from './Ticket.module.scss';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { switchBigTicketSlice } from '../../../redux/slices/modalSlice';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -18,12 +20,14 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 export const Ticket = ({ title, alt_title, price, srcPicca }) => {
   const [isVisibleBigTicket, setIsVisibleBigTicket] = useState(false);
-  const onClickBigTicket = () => {
-    setIsVisibleBigTicket(!isVisibleBigTicket);
-  };
+  const switchBigTicket = useSelector(state => state.modalSlice.valueBigTicket);
+  const dispatch = useDispatch();
+  // const onClickBigTicket = () => {
+  //   setIsVisibleBigTicket(!isVisibleBigTicket);
+  // };
   return (
     <Card className={styles.ticket} sx={{ maxWidth: 345 }}>
-      <CardActionArea onClick={() => onClickBigTicket()}>
+      <CardActionArea onClick={() => dispatch(switchBigTicketSlice())}>
         <CardMedia component="img" image={srcPicca} alt={title} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -39,7 +43,7 @@ export const Ticket = ({ title, alt_title, price, srcPicca }) => {
       </CardActionArea>
       <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
       <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} />
-      {isVisibleBigTicket && <BigTicket />}
+      {switchBigTicket && <BigTicket />}
     </Card>
   );
 };

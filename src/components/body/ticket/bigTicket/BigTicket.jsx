@@ -2,7 +2,7 @@ import styles from './BigTicket.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { switchBigTicketSlice } from '../../../../redux/slices/modalSlice';
 
-export const BigTicket = () => {
+export const BigTicket = ({ id, title, alt_title, price, srcPicca }) => {
   const switchBigTicket = useSelector(state => state.modalSlice.valueBigTicket);
   const dispatch = useDispatch();
   return (
@@ -12,7 +12,13 @@ export const BigTicket = () => {
           e.stopPropagation();
         }}
         className={styles.bigTicket}>
-        BIG TICKET
+        <div onClick={() => console.log({ title })}>{title}</div>
+        <br />
+        {alt_title}
+        <br />
+        {price}
+        <br />
+        {id}
       </div>
     </div>
   );

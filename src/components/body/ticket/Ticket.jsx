@@ -1,5 +1,5 @@
 import styles from './Ticket.module.scss';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { switchBigTicketSlice } from '../../../redux/slices/modalSlice';
 
@@ -18,8 +18,8 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { BigTicket } from './bigTicket/BigTicket';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-export const Ticket = ({ title, alt_title, price, srcPicca }) => {
-  const [isVisibleBigTicket, setIsVisibleBigTicket] = useState(false);
+export const Ticket = ({ id, title, alt_title, price, srcPicca }) => {
+  // const [isVisibleBigTicket, setIsVisibleBigTicket] = useState(false);
   const switchBigTicket = useSelector(state => state.modalSlice.valueBigTicket);
   const dispatch = useDispatch();
   // const onClickBigTicket = () => {
@@ -27,23 +27,28 @@ export const Ticket = ({ title, alt_title, price, srcPicca }) => {
   // };
   return (
     <Card className={styles.ticket} sx={{ maxWidth: 345 }}>
-      <CardActionArea onClick={() => dispatch(switchBigTicketSlice())}>
-        <CardMedia component="img" image={srcPicca} alt={title} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {alt_title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            PRICE - {price}$
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+      <div onClick={() => console.log({ id }, { title })}>
+        <CardActionArea onClick={() => dispatch(switchBigTicketSlice())}>
+          <CardMedia component="img" image={srcPicca} alt={title} />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {alt_title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Цена - {price}$
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </div>
       <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
       <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} />
-      {switchBigTicket && <BigTicket />}
+      <div onClick={() => console.log({ id }, { title })}>Проверка</div>
+      {switchBigTicket && (
+        <BigTicket id={id} title={title} alt_title={alt_title} price={price} srcPicca={srcPicca} />
+      )}
     </Card>
   );
 };
